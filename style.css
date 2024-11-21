@@ -1,16 +1,75 @@
-canvas {
-    position: absolute;
-    left:0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.2);
+body {
+  background-image: url('pexels-reneterp-1581384.jpg');
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 20px;
+    background-color: #7f7ea4;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
   }
+  
   h1 {
-
-    color: rgb(185, 40, 76) ;
+    text-align: center;
+    color: #bbb1b4;
+    font-family: 'Times New Roman', Times, serif;
   }
-  body {
-
-    background-color: rgb(26, 11, 14);
+  
+  form {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 40px;
+    border: 1px solid #8c7b26;
+    border-radius: 10px;
+    background-color: rgba(198, 198, 196, 0.146);  /* Ajoute de la transparence */ 
   }
+  
+  form div {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #000000;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: large;
+  }
+  
+  select, input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #2c0707;
+    background-color: #ffffffce;
+    border-radius: 5px;
+    color: #000000;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: medium;
+  }
+  
+  textarea {
+    height: 200px;
+    resize: none;
+    color: #ab0606;
+    
+  }
+  
+  button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #0c602e;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  button:hover {
+    background-color: #1dac51;
+  }
+  

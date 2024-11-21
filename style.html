@@ -1,13 +1,86 @@
+
+
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 <head>
+
+
+  <meta name="abderesto" content="welcomm">
+  <meta name="abderesto" content="HTML, CSS, screpte ,website">
+  <meta name="abderrahmane" content="abderrahmane">
+  
+
+
   <meta charset="UTF-8">
-  <title>HEART.ABDEK7 </title>
-<link rel="stylesheet" href="style.css">
+  <title>Commande AU PAUL</title>
+  <link rel="stylesheet" href="style.css">
+
 </head>
-<h1> A </h1>
 <body>
-<canvas id="heart"></canvas>
-<script src="scripte.js"></script>
+  <h1>Formulaire de Commande</h1>
+  <form id="commandeForm">
+
+    <div>
+      <label for="entree">Entrée :</label>
+      <select id="entree" name="entree" onchange="changeNbrPersonne(this, 'entreeNbr')">
+        <option value="aucun" data-prix="0">Aucun</option>
+        <option value="salade" data-prix="50">Salade - 50dh</option>
+        <option value="soupe" data-prix="40">Soupe - 40dh</option>
+        <option value="bid et maadnous" data-prix="25">bid et maadnous - 25dh</option>
+      </select>
+      <input type="number" id="entreeNbr" name="entreeNbr" value="0" min="0" onchange="calculerTotal()">
+    </div>
+
+    <div>
+      <label for="plat">Plat Principal :</label>
+      <select id="plat" name="plat" onchange="changeNbrPersonne(this, 'platNbr')">
+        <option value="aucun" data-prix="0">Aucun</option>
+        <option value="steak" data-prix="200">Steak - 200dh</option>
+        <option value="poulet" data-prix="45">Poulet - 45dh</option>
+        <option value="Bastilla de 6 personne" data-prix="600">Bastilla - 600dh </option>
+
+      </select>
+      <input type="number" id="platNbr" name="platNbr" value="0" min="0" onchange="calculerTotal()">
+    </div>
+
+    <div>
+      <label for="dessert">Dessert :</label>
+      <select id="dessert" name="dessert" onchange="changeNbrPersonne(this, 'dessertNbr')">
+        <option value="aucun" data-prix="0">Aucun</option>
+        <option value="tarte" data-prix="22">Tarte - 22dh</option>
+        <option value="Glace" data-prix="25">Glace - 25dh</option>
+
+
+        
+      </select>
+      
+      <input type="number" id="dessertNbr" name="dessertNbr" value="0" min="0" onchange="calculerTotal()">
+    </div>
+
+    <div>
+        <label for="boisson">boisson :</label>
+        <select id="boisson" name="boisson" onchange="changeNbrPersonne(this, 'boissonNbr')">
+            <option value="aucun" data-prix="0">Aucun</option>
+            <option value="napoleon Cognacs par verre" data-prix="2500">napoleon Cognacs - 2500dh</option>
+            <option value=" Tequila par verre" data-prix="3400">Tequila - 3400dh</option>
+        </select>
+        <input type="number" id="boissonNbr" name="boissonNbr" value="0" min="0" onchange="calculerTotal()">
+
+
+    </div>
+
+    <div>
+      <label for="total">Total :</label>
+      <input type="text" id="total" name="total" value="0dh" readonly>
+    </div>
+
+    <div>
+      <label for="facture">Facture :</label>
+      <textarea id="facture" name="facture" readonly></textarea>
+    </div>
+
+    <button type="button" onclick="genererFacture()">Commander</button>
+  </form>
+  <script src="screpte.js"></script>
 </body>
 </html>
